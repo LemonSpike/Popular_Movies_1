@@ -10,7 +10,6 @@ import android.widget.ImageView;
 
 import com.kasetti.pranav.popularmovies.model.Movie;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.PicassoProvider;
 
 import java.util.List;
 
@@ -35,7 +34,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesAdap
     public class MoviesAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         final ImageView mMovieImageView;
 
-        public MoviesAdapterViewHolder(View view) {
+        MoviesAdapterViewHolder(View view) {
             super(view);
             mMovieImageView = view.findViewById(R.id.iv_movie);
             view.setOnClickListener(this);
@@ -58,6 +57,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesAdap
      *                  for more details.
      * @return A new MoviesAdapterViewHolder that holds the View for each list item
      */
+    @NonNull
     @Override
     public MoviesAdapterViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         Context context = viewGroup.getContext();

@@ -126,8 +126,7 @@ public class MainActivity extends AppCompatActivity implements MoviesAdapter.Mov
         @Override
         protected List<Movie> doInBackground(MoviesSortType... moviesSortType) {
             try {
-                List<Movie> movies = NetworkUtils.getMoviesListForSortType(moviesSortType[0]);
-                return movies;
+                return NetworkUtils.getMoviesListForSortType(moviesSortType[0]);
             } catch (Exception e) {
                 e.printStackTrace();
                 return null;

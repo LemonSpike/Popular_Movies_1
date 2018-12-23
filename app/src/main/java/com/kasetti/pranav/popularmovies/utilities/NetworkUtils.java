@@ -72,6 +72,7 @@ public final class NetworkUtils {
         } else if (moviesSortType == MoviesSortType.TOP_RATED) {
             url = buildTopRatedMoviesURL();
         }
+        assert url != null;
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
             InputStream in = urlConnection.getInputStream();
